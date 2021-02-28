@@ -20,6 +20,7 @@ before_install:
   - docker build -t paserafim/react-test -f ./client/Dockerfile.dev ./client
 
 script:
+  # -e CI para sair dos teste
   - docker run -e CI=true paserafim/react-test npm run test 
 
 deploy:
